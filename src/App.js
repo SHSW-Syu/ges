@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 import Products from './components/Products';
 import Cart from './components/Cart';
-import QRScanner from './components/QRScanner';
+//import QRScanner from './components/QRScanner';
 import QRCodeGenerator from './components/QRCodeGenerator';
 import './App.css';
 
@@ -173,7 +173,7 @@ function App() {
             />
           } 
         />
-        <Route path="/scan" element={<QRScanner applyDiscount={applyDiscount} />} />
+        {/* <Route path="/scan" element={<QRScanner applyDiscount={applyDiscount} />} /> */}
       </Routes>
 
       {/* <div>
