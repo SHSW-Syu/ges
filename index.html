@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Received Data</title>
+</head>
+<body>
+    <h1>Received Data</h1>
+    <div id="data-container"></div>
+    
+    <script>
+        // Fetch data from your API
+        async function fetchData() {
+            try {
+                const response = await fetch('http://localhost:3000/data'); // API URL
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                document.getElementById('data-container').innerHTML = JSON.stringify(data);
+            } catch (error) {
+                console.error('Fetch error:', error);
+            }
+        }
+
+        // 定时刷新数据
+        setInterval(fetchData, 5000); // 每5秒刷新一次
+        fetchData(); // 初始化调用
+    </script>
+</body>
+</html>

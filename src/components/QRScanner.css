@@ -1,0 +1,31 @@
+/* src/components/QRScanner.css */
+.scan-message {
+    background-color: #4caf50; /* 绿色背景 */
+    color: white; /* 白色字体 */
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px; /* 距离顶部的距离 */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 1s ease-in-out; /* 淡出效果 */
+    opacity: 1;
+  }
+  
+  .scan-message:not(:last-child) {
+    opacity: 1;
+  }
+  
+  .scan-message {
+    animation: fadeOut 1s forwards; /* 淡出动画 */
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
